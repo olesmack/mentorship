@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class CategoriesPage {
+
+    WebDriver driver = new ChromeDriver();
+
     public void clickOnHeadphonesAndAccessories() {
         driver.findElement(By.cssSelector("[title='Навушники та аксесуари']:last-child")).click();
     }
