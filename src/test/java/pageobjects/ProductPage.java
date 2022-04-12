@@ -7,7 +7,10 @@ import org.testng.annotations.BeforeClass;
 
 public class ProductPage {
 
-    WebDriver driver = new ChromeDriver();
+    private WebDriver driver;
+    public ProductPage(WebDriver driver) {
+        this.driver = driver;
+    }
 
     public void addToCart() {
         driver.findElement(By.cssSelector(".buy-button__label.ng-star-inserted")).click();
