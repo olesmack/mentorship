@@ -8,8 +8,7 @@ import pageobjects.*;
 public class Rozetka {
 
     @Test
-    public void testRozetka()
-    {
+    public void testRozetka() {
         System.setProperty("webdriver.chrome.driver", "/Users/omaku/Downloads/chromedriver");
         WebDriver driver = new ChromeDriver();
 
@@ -25,6 +24,15 @@ public class Rozetka {
         headphonesAndAccessoriesPage.clickOnFilter();
         headphonesAndAccessoriesPage.clickOnProduct();
         productPage.addToCart();
-        cartPage.verifyProduct();
+
+        public void verifyProduct () {
+            driver.findElement(cartPage.cartHeader).click();
+            String name2 = driver.findElement(cartPage.productInCart).getText();
+            if (headphonesAndAccessoriesPage.clickOnProduct().equals(name2)) {
+                System.out.println(headphonesAndAccessoriesPage.clickOnProduct());
+            } else {
+                System.out.println("Wrong product in the cart");
+            }
+        }
     }
 }

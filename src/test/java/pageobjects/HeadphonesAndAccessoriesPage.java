@@ -3,7 +3,7 @@ package pageobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HeadphonesAndAccessoriesPage {
+public class HeadphonesAndAccessoriesPage extends BasePage {
 
     private By product = By.cssSelector("[title='Навушники Defunc True Music TWS Blue (D4274M)'] span");
     private By productHeading = By.cssSelector(".product__heading");

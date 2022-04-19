@@ -3,7 +3,7 @@ package pageobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CategoriesPage {
+public class CategoriesPage extends BasePage {
 
     private By headphonesAndAccessories = By.cssSelector("[title='Навушники та аксесуари']");
 
