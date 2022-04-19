@@ -5,12 +5,14 @@ import org.openqa.selenium.WebDriver;
 
 public class CategoriesPage {
 
+    private By headphonesAndAccessories = By.cssSelector("[title='Навушники та аксесуари']");
+
     private WebDriver driver;
     public CategoriesPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void clickOnHeadphonesAndAccessories() {
-        driver.findElement(By.cssSelector("[title='Навушники та аксесуари']")).click();
+        driver.findElement(headphonesAndAccessories).click();
     }
 }

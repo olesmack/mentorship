@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage {
 
+    private By computersAndLaptops = By.cssSelector("div.menu-wrapper.menu-wrapper_state_static ul:first-child li:first-child a");
+
     private WebDriver driver;
 
     public HomePage(WebDriver driver) {
@@ -16,6 +18,6 @@ public class HomePage {
     }
 
     public void clickOnComputersAndLaptops() {
-        driver.findElement(By.cssSelector("div.menu-wrapper.menu-wrapper_state_static ul:first-child li:first-child a")).click();
+        driver.findElement(computersAndLaptops).click();
     }
 }

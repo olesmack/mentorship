@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 
 public class CartPage {
 
+    private By cartHeader = By.cssSelector(".header-actions__item.header-actions__item--cart");
+    private By productInCart = By.cssSelector(".cart-product__main a");
+
     private WebDriver driver;
 
     public CartPage(WebDriver driver) {
@@ -13,8 +16,8 @@ public class CartPage {
 
     public void verifyProduct() {
         HeadphonesAndAccessoriesPage headphonesAndAccessoriesPage = new HeadphonesAndAccessoriesPage(driver);
-        driver.findElement(By.cssSelector(".header-actions__item.header-actions__item--cart")).click();
-        String name2 = driver.findElement(By.cssSelector(".cart-product__main a")).getText();
+        driver.findElement(cartHeader).click();
+        String name2 = driver.findElement(productInCart).getText();
         if (headphonesAndAccessoriesPage.clickOnProduct().equals(name2)) {
             System.out.println(headphonesAndAccessoriesPage.clickOnProduct());
         } else {
