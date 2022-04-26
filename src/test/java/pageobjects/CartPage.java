@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 public class CartPage extends BasePage {
 
-    private By cartHeader = By.cssSelector(".header-actions__item.header-actions__item--cart");
-    private By productInCart = By.cssSelector(".cart-product__main a");
+    public By cartHeader = By.cssSelector(".header-actions__item.header-actions__item--cart");
+    public By productInCart = By.cssSelector(".cart-product__main a");
 
     private WebDriver driver;
 

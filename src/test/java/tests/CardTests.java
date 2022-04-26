@@ -5,18 +5,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageobjects.*;
 
-public class Rozetka {
+public class CardTests {
+
+    private WebDriver driver;
 
     @Test
     public void testRozetka() {
         System.setProperty("webdriver.chrome.driver", "/Users/omaku/Downloads/chromedriver");
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
 
         HomePage homePage = new HomePage(driver);
         CategoriesPage categoriesPage = new CategoriesPage(driver);
         HeadphonesAndAccessoriesPage headphonesAndAccessoriesPage = new HeadphonesAndAccessoriesPage(driver);
         ProductPage productPage = new ProductPage(driver);
-        CartPage cartPage = new CartPage(driver);
 
         homePage.openHomePage();
         homePage.clickOnComputersAndLaptops();
@@ -24,15 +25,18 @@ public class Rozetka {
         headphonesAndAccessoriesPage.clickOnFilter();
         headphonesAndAccessoriesPage.clickOnProduct();
         productPage.addToCart();
+        verifyProduct();
+    }
 
-        public void verifyProduct () {
-            driver.findElement(cartPage.cartHeader).click();
-            String name2 = driver.findElement(cartPage.productInCart).getText();
-            if (headphonesAndAccessoriesPage.clickOnProduct().equals(name2)) {
-                System.out.println(headphonesAndAccessoriesPage.clickOnProduct());
-            } else {
-                System.out.println("Wrong product in the cart");
-            }
+    public void verifyProduct() {
+        CartPage cartPage = new CartPage(driver);
+        HeadphonesAndAccessoriesPage headphonesAndAccessoriesPage = new HeadphonesAndAccessoriesPage(driver);
+        driver.findElement(cartPage.cartHeader).click();
+        String name2 = driver.findElement(cartPage.productInCart).getText();
+        if (headphonesAndAccessoriesPage.clickOnProduct().equals(name2)) {
+            System.out.println(headphonesAndAccessoriesPage.clickOnProduct());
+        } else {
+            System.out.println("Wrong product in the cart");
         }
     }
 }
