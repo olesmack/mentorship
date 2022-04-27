@@ -9,8 +9,9 @@ public class HeadphonesAndAccessoriesPage extends BasePage {
     private By productHeading = By.cssSelector(".product__heading");
 
     private WebDriver driver;
-    public HeadphonesAndAccessoriesPage(WebDriver driver) {
-        this.driver = driver;
+    public HeadphonesAndAccessoriesPage(WebDriver driver)
+    {
+        super(driver);
     }
 
     public void clickOnFilter() {

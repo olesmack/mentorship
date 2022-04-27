@@ -7,10 +7,9 @@ public class HomePage extends BasePage {
 
     private By computersAndLaptops = By.cssSelector("div.menu-wrapper.menu-wrapper_state_static ul:first-child li:first-child a");
 
-    private WebDriver driver;
-
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
+    public HomePage(WebDriver driver)
+    {
+        super(driver);
     }
 
     public void openHomePage() {

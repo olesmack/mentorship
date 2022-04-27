@@ -10,7 +10,7 @@ public class CardTests {
     private WebDriver driver;
 
     @Test
-    public void testRozetka() {
+    public void testCardTests() {
         System.setProperty("webdriver.chrome.driver", "/Users/omaku/Downloads/chromedriver");
         driver = new ChromeDriver();
 

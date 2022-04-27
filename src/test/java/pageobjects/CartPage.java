@@ -10,7 +10,8 @@ public class CartPage extends BasePage {
 
     private WebDriver driver;
 
-    public CartPage(WebDriver driver) {
-    this.driver = driver;
+    public CartPage(WebDriver driver)
+    {
+        super(driver);
     }
 }
