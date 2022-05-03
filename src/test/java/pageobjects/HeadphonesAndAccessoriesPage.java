@@ -8,7 +8,6 @@ public class HeadphonesAndAccessoriesPage extends BasePage {
     private By product = By.cssSelector("[title='Навушники Defunc True Music TWS Blue (D4274M)'] span");
     private By productHeading = By.cssSelector(".product__heading");
 
-    private WebDriver driver;
     public HeadphonesAndAccessoriesPage(WebDriver driver)
     {
         super(driver);
