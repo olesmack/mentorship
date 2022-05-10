@@ -2,6 +2,7 @@ package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ProductPage extends BasePage {
 
@@ -13,6 +14,6 @@ public class ProductPage extends BasePage {
     }
 
     public void addToCart() {
-        driver.findElement(cart).click();
+        wait.until(ExpectedConditions.elementToBeClickable(cart)).click();
     }
 }

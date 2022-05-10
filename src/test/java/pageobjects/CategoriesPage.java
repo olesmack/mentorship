@@ -2,6 +2,7 @@ package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CategoriesPage extends BasePage {
 
@@ -14,6 +15,6 @@ public class CategoriesPage extends BasePage {
     }
 
     public void clickOnHeadphonesAndAccessories() {
-        driver.findElement(headphonesAndAccessories).click();
+        wait.until(ExpectedConditions.elementToBeClickable(headphonesAndAccessories)).click();
     }
 }
