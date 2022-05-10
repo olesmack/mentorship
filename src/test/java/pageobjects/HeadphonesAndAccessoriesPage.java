@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HeadphonesAndAccessoriesPage extends BasePage {
 
-    private By product = By.cssSelector("[title='Навушники Defunc True Music TWS Blue (D4274M)'] span");
+    private By product = By.cssSelector("[alt='Навушники Defunc True Music TWS Black (D4271M)']:nth-child(2)");
     private By productHeading = By.cssSelector(".product__heading");
     private By filterRozetkaSeller = By.cssSelector("[class='checkbox-filter__link'][data-id='Rozetka']");
 
