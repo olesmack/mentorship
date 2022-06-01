@@ -18,7 +18,7 @@ public class Main
         System.out.println("Playlist" + playlist);
     }
 
-    public void playAllSongs()
+    public void playAllSongsFromEnd()
     {
 //        from end to start
     }
