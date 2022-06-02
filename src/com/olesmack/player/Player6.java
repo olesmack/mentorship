@@ -1,12 +1,12 @@
 package com.olesmack.player;
 
-import com.olesmack.Main;
+import com.olesmack.PlayerAbstractClass;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class Player6 extends Main
+public class Player6 extends PlayerAbstractClass
 {
     final int price;
 
@@ -19,18 +19,18 @@ public class Player6 extends Main
     }
 
     public void playSong() {
-        System.out.println("Playing: " + song4);
+        System.out.println("Playing: " + getSong());
     }
 
     public void playAllSongs() {
-        System.out.println("Playlist: " + playlist + "\n");
+        System.out.println("Playlist: " + getPlaylist() + "\n");
     }
 
     public void shuffle()
     {
-        List<String> list = Arrays.asList(playlist);
+        List<String> list = Arrays.asList(getPlaylist());
         int length = list.size();
-        for (int i = 0; i < playlist.length; i++) {
+        for (int i = 0; i < getPlaylist().length; i++) {
             int index = new Random().nextInt(length);
             String shuffle = list.get(index);
             System.out.println(shuffle);

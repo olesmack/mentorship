@@ -1,8 +1,9 @@
 package com.olesmack.player;
 
-import com.olesmack.Main;
+import com.olesmack.PlayerAbstractClass;
 
-public class Player2 extends Main {
+public class Player2 extends PlayerAbstractClass {
+
     final int price;
 
     public Player2(int price) {

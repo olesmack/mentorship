@@ -1,8 +1,8 @@
 package com.olesmack.player;
 
-import com.olesmack.Main;
+import com.olesmack.PlayerAbstractClass;
 
-public class Player5 extends Main
+public class Player5 extends PlayerAbstractClass
 {
     final int price;
 
@@ -15,12 +15,12 @@ public class Player5 extends Main
     }
 
     public void playSong() {
-        System.out.println("Playing: " + song1);
+        System.out.println("Playing: " + getSong());
     }
 
     public void playAllSongs() {
-        for(int i = playlist.length-1; i >= 0 ; i--) {
-            System.out.print("Playlist reverse order: " + playlist[i] + "\n");
+        for(int i = getPlaylist().length-1; i >= 0 ; i--) {
+            System.out.print("Playlist reverse order: " + getPlaylist()[i] + "\n");
         }
     }
 }
