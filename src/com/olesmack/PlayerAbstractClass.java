@@ -1,5 +1,7 @@
 package com.olesmack;
 
+import com.olesmack.player.Player1;
+
 public class PlayerAbstractClass
 {
     private String song;
@@ -20,5 +22,6 @@ public class PlayerAbstractClass
     public String[] getPlaylist() {
         return playlist;
     }
+
 }
 
