@@ -1,11 +1,22 @@
 package com.olesmack;
 
-import com.olesmack.player.Player1;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 public class PlayerAbstractClass
 {
+    final int price;
     private String song;
     private String[] playlist = new String[] {};
+
+    public PlayerAbstractClass(int price) {
+        this.price = price;
+    }
+
+    public int getPrice() {
+        return price;
+    }
 
     public void setSong(String song) {
         this.song = song;
@@ -21,6 +32,32 @@ public class PlayerAbstractClass
 
     public String[] getPlaylist() {
         return playlist;
+    }
+
+    public void playSong() {
+        System.out.println("Playing: " + getSong());
+    }
+
+    public void playAllSongs() {
+        for(int i = 0; i <= getPlaylist().length; i++) {
+            System.out.print("Playlist: " + getPlaylist()[i] + "\n");
+        }    }
+
+    public void playAllSongsReverse() {
+        for(int i = getPlaylist().length-1; i >= 0 ; i--) {
+            System.out.print("Playlist reverse order: " + getPlaylist()[i] + "\n");
+        }
+    }
+
+    public void shuffle()
+    {
+        List<String> list = Arrays.asList(getPlaylist());
+        int length = list.size();
+        for (int i = 0; i < getPlaylist().length; i++) {
+            int index = new Random().nextInt(length);
+            String shuffle = list.get(index);
+            System.out.println(shuffle);
+        }
     }
 
 }
