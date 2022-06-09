@@ -4,13 +4,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class PlayerAbstractClass
+public abstract class AbstractPlayer
 {
     final int price;
     private String song;
     private String[] playlist = new String[] {};
 
-    public PlayerAbstractClass(int price) {
+    protected AbstractPlayer(int price) {
         this.price = price;
     }
 
@@ -34,9 +34,7 @@ public class PlayerAbstractClass
         return playlist;
     }
 
-    public void playSong() {
-        System.out.println("Playing: " + getSong());
-    }
+    protected abstract void playSong();
 
     public void playAllSongs() {
         for(int i = 0; i <= getPlaylist().length; i++) {
