@@ -3,18 +3,20 @@ package com.olesmack;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public abstract class AbstractPlayer
 {
     final int price;
     private String song;
-    private String[] playlist = new String[] {};
+    private String[] playlist = new String[] {"hello", "Its me"};
 
     protected AbstractPlayer(int price) {
         this.price = price;
     }
 
     public int getPrice() {
+        System.out.println("Price: " + price);
         return price;
     }
 
@@ -23,6 +25,10 @@ public abstract class AbstractPlayer
     }
 
     public void setPlaylist(String[] playlist) {
+//        Scanner scanner = new Scanner(System.in);
+//        for(int i = 0; i <= playlist.length; i++) {
+//            playlist[i] = scanner.nextLine();
+//        }
         this.playlist = playlist;
     }
 
@@ -37,7 +43,7 @@ public abstract class AbstractPlayer
     protected abstract void playSong();
 
     public void playAllSongs() {
-        for(int i = 0; i <= getPlaylist().length; i++) {
+        for(int i = 0; i <= playlist.length; i++) {
             System.out.print("Playlist: " + getPlaylist()[i] + "\n");
         }    }
 
@@ -56,6 +62,11 @@ public abstract class AbstractPlayer
             String shuffle = list.get(index);
             System.out.println(shuffle);
         }
+    }
+
+    public void inputData() {
+        Scanner scanner = new Scanner(System.in);
+        setSong(scanner.nextLine());
     }
 
 }

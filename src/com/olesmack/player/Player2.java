@@ -24,8 +24,7 @@ public class Player2 extends AbstractPlayer {
 
     public void inputSong() {
         System.out.println("Input song name to play: ");
-        Scanner scanner = new Scanner(System.in);
-        setSong(scanner.nextLine());
+        inputData();
     }
 
 }

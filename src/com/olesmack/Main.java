@@ -12,12 +12,18 @@ public class Main {
         Player5 player5 = new Player5(5);
         Player6 player6 = new Player6(6);
 
-        player1.playerName();
-        player1.inputSong();
-        player1.playSong();
+//        player1.playerName();
+//        player1.getPrice();
+//        player1.inputSong();
+//        player1.playSong();
+//
+//        player2.playerName();
+//        player2.getPrice();
+//        player2.inputSong();
+//        player2.playSong();
 
-        player2.playerName();
-        player2.inputSong();
-        player2.playSong();
+        player3.playerName();
+        player3.getPrice();
+        player3.playList();
     }
 }

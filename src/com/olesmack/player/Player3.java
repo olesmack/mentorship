@@ -8,8 +8,20 @@ public class Player3 extends AbstractPlayer
         super(price);
     }
 
+    public void playerName() {
+        System.out.println("PlayerThree");
+    }
+
     @Override
     public void playSong() {
-        System.out.println("Playing: " + getSong());
+        if (getSong() != null) {
+            System.out.println("Error");
+            System.out.println();
+        }
     }
+
+    public void playList() {
+        System.out.println("Playlist: "+ getPlaylist());
+    }
+
 }
