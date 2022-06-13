@@ -14,14 +14,8 @@ public class Player3 extends AbstractPlayer
 
     @Override
     public void playSong() {
-        if (getSong() != null) {
-            System.out.println("Error");
-            System.out.println();
-        }
+        System.out.println("Playing: " + getPlaylist()[0]);
     }
 
-    public void playList() {
-        System.out.println("Playlist: "+ getPlaylist());
-    }
 
 }

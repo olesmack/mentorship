@@ -9,7 +9,7 @@ public abstract class AbstractPlayer
 {
     final int price;
     private String song;
-    private String[] playlist = new String[] {"hello", "Its me"};
+    private String[] playlist = new String[3];
 
     protected AbstractPlayer(int price) {
         this.price = price;
@@ -25,27 +25,33 @@ public abstract class AbstractPlayer
     }
 
     public void setPlaylist(String[] playlist) {
-//        Scanner scanner = new Scanner(System.in);
-//        for(int i = 0; i <= playlist.length; i++) {
-//            playlist[i] = scanner.nextLine();
-//        }
-        this.playlist = playlist;
+      this.playlist = playlist;
     }
 
-    public String getSong() {
-        return song;
+    public void inputPlaylist() {
+        System.out.println("Input playlist songs: ");
+        for(int i = 0; i < 3; i++) {
+            Scanner scanner = new Scanner(System.in);
+            playlist[i] = scanner.nextLine();
+        }
     }
 
     public String[] getPlaylist() {
         return playlist;
     }
 
+    public String getSong() {
+        return song;
+    }
+
     protected abstract void playSong();
 
     public void playAllSongs() {
-        for(int i = 0; i <= playlist.length; i++) {
-            System.out.print("Playlist: " + getPlaylist()[i] + "\n");
-        }    }
+        System.out.println("Playlist: ");
+        for(int i = 0; i < playlist.length; i++) {
+            System.out.print(getPlaylist()[i] + "\n");
+        }
+    }
 
     public void playAllSongsReverse() {
         for(int i = getPlaylist().length-1; i >= 0 ; i--) {
@@ -64,7 +70,7 @@ public abstract class AbstractPlayer
         }
     }
 
-    public void inputData() {
+    public void inputSongName() {
         Scanner scanner = new Scanner(System.in);
         setSong(scanner.nextLine());
     }

@@ -24,6 +24,8 @@ public class Main {
 
         player3.playerName();
         player3.getPrice();
-        player3.playList();
+        player3.inputPlaylist();
+        player3.playSong();
+        player3.playAllSongs();
     }
 }
