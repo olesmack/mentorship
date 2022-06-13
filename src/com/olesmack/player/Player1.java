@@ -2,6 +2,8 @@ package com.olesmack.player;
 
 import com.olesmack.AbstractPlayer;
 
+import java.util.Scanner;
+
 public class Player1 extends AbstractPlayer
 {
     public Player1(int price) {
@@ -18,9 +20,9 @@ public class Player1 extends AbstractPlayer
         System.out.println();
     }
 
-    public void inputSong() {
+    public void inputSongName() {
         System.out.println("Input song name to play: ");
-        inputSongName();
+        Scanner scanner = new Scanner(System.in);
+        setSong(scanner.nextLine());
     }
-
 }

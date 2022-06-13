@@ -14,12 +14,12 @@ public class Main {
 
 //        player1.playerName();
 //        player1.getPrice();
-//        player1.inputSong();
+//        player1.inputSongName();
 //        player1.playSong();
 //
 //        player2.playerName();
 //        player2.getPrice();
-//        player2.inputSong();
+//        player2.inputSongName();
 //        player2.playSong();
 
         player3.playerName();
@@ -27,5 +27,11 @@ public class Main {
         player3.inputPlaylist();
         player3.playSong();
         player3.playAllSongs();
+
+        player4.playerName();
+        player4.getPrice();
+        player4.inputPlaylist();
+        player4.playSong();
+        player4.playAllSongs();
     }
 }
