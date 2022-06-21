@@ -11,7 +11,7 @@ public class Player2 extends AbstractPlayer {
     }
 
     public void playerName() {
-        System.out.println("PlayerTwo");
+        System.out.println("Player 2");
     }
 
     @Override

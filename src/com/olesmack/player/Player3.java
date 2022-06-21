@@ -6,12 +6,13 @@ import java.util.Scanner;
 
 public class Player3 extends AbstractPlayer
 {
+    public String[] arrayPlaylist = new String[3];
     public Player3(int price) {
         super(price);
     }
 
     public void playerName() {
-        System.out.println("PlayerThree");
+        System.out.println("Player 3");
     }
 
     @Override
@@ -23,8 +24,9 @@ public class Player3 extends AbstractPlayer
         System.out.println("Input playlist songs: ");
         for(int i = 0; i < 3; i++) {
             Scanner scanner = new Scanner(System.in);
-            setPlaylist()[i] = scanner.nextLine();
+            arrayPlaylist[i] = scanner.nextLine();
         }
+        setPlaylist(arrayPlaylist);
     }
 
     public void playAllSongs() {
