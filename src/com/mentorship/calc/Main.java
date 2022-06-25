@@ -1,4 +1,4 @@
-package com.mentorship;
+package com.mentorship.calc;
 import java.util.Scanner;
 
 public class Main {

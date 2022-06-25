@@ -1,4 +1,4 @@
-package com.mentorship;
+package com.mentorship.calc;
 
 public class Calculator {
     float a;
