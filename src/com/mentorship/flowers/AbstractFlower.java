@@ -1,20 +1,12 @@
 package com.mentorship.flowers;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class AbstractFlower {
 
     private int roseAmount;
     private int daisyAmount;
     private int tulipAmount;
-    private int[] bouquet;
-    private String flowerBouquet;
-
-    public String getFlowerBouquet() {
-        return flowerBouquet;
-    }
-
-    public void setFlowerBouquet(String flowerBouquet) {
-        this.flowerBouquet = flowerBouquet;
-    }
 
     public int getRoseAmount() {
         return roseAmount;
@@ -28,9 +20,6 @@ public class AbstractFlower {
         return tulipAmount;
     }
 
-    public int[] getBouquet() {
-        return bouquet;
-    }
 
     public void setRoseAmount(int roseAmount) {
         this.roseAmount = roseAmount;
@@ -44,8 +33,5 @@ public class AbstractFlower {
         this.tulipAmount = tulipAmount;
     }
 
-    public void setBouquet(int[] bouquet) {
-        this.bouquet = bouquet;
-    }
 
 }

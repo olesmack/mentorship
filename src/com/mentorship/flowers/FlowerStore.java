@@ -1,16 +1,9 @@
 package com.mentorship.flowers;
-
 import java.util.Scanner;
 
 public class FlowerStore extends AbstractFlower {
 
-//    String flowerBouquet;
-//    String tempBouquetRose;
-//    String tempBouquetDaisy;
-//    String tempBouquetTulip;
-
-
-    public void sell() {
+    public String[] sell() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input numbers of Roses: ");
         setRoseAmount(scanner.nextInt());
@@ -21,20 +14,33 @@ public class FlowerStore extends AbstractFlower {
         System.out.println("Input numbers of Tulips: ");
         setTulipAmount(scanner.nextInt());
 
-        String[] tempArray = new String[getRoseAmount()];
+        String[] roseArray = new String[getRoseAmount()];
         for (int i = 0; i < getRoseAmount(); i++) {
-            tempArray[i] = ("Rose");
-            System.out.println(tempArray[i]);
+            roseArray[i] = ("Rose");
+//            System.out.println(roseArray[i]);
         }
 
+        String[] daisyArray = new String[getDaisyAmount()];
         for (int i = 0; i < getDaisyAmount(); i++) {
-            tempArray[i] = ("Daisy");
-            System.out.println(tempArray[i]);
+            daisyArray[i] = ("Daisy");
+//            System.out.println(daisyArray[i]);
         }
 
+        String[] tulipArray = new String[getTulipAmount()];
         for (int i = 0; i < getTulipAmount(); i++) {
-            tempArray[i] = ("Tulip");
-            System.out.println(tempArray[i]);
+            tulipArray[i] = ("Tulip");
+//            System.out.println(tulipArray[i]);
         }
+
+        int roseArrLen = roseArray.length;
+        int daisyArrLen = daisyArray.length;
+        int tulipArrLen = tulipArray.length;
+        String[] flowersBouquet = new String[roseArrLen + daisyArrLen + tulipArrLen];
+
+        System.arraycopy(roseArray, 0, flowersBouquet, 0, roseArrLen);
+        System.arraycopy(daisyArray, 0, flowersBouquet, roseArrLen, daisyArrLen);
+        System.arraycopy(tulipArray, 0, flowersBouquet, 0, tulipArrLen);
+
+        return flowersBouquet;
     }
 }
