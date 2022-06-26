@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class FlowerStore extends AbstractFlower {
 
-    String flowerBouquet;
-    String tempBouquetRose;
-    String tempBouquetDaisy;
-    String tempBouquetTulip;
+//    String flowerBouquet;
+//    String tempBouquetRose;
+//    String tempBouquetDaisy;
+//    String tempBouquetTulip;
 
 
     public void sell() {
@@ -21,12 +21,20 @@ public class FlowerStore extends AbstractFlower {
         System.out.println("Input numbers of Tulips: ");
         setTulipAmount(scanner.nextInt());
 
-        tempBouquetRose = String.valueOf(getRoseAmount());
-        tempBouquetDaisy = String.valueOf(getDaisyAmount());
-        tempBouquetTulip = String.valueOf(getTulipAmount());
-        flowerBouquet = tempBouquetRose + tempBouquetDaisy + tempBouquetTulip;
-        System.out.println(flowerBouquet);
+        String[] tempArray = new String[getRoseAmount()];
+        for (int i = 0; i < getRoseAmount(); i++) {
+            tempArray[i] = ("Rose");
+            System.out.println(tempArray[i]);
+        }
 
-        setFlowerBouquet(flowerBouquet);
+        for (int i = 0; i < getDaisyAmount(); i++) {
+            tempArray[i] = ("Daisy");
+            System.out.println(tempArray[i]);
+        }
+
+        for (int i = 0; i < getTulipAmount(); i++) {
+            tempArray[i] = ("Tulip");
+            System.out.println(tempArray[i]);
+        }
     }
 }
