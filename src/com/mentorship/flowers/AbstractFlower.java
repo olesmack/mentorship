@@ -1,7 +1,5 @@
 package com.mentorship.flowers;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class AbstractFlower {
 
     private int roseAmount;
