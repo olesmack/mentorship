@@ -1,6 +1,13 @@
 package com.mentorship.flowers;
 
+import java.util.Arrays;
+
 public class FlowerStore {
+
+    @Override
+    public String toString() {
+    return Arrays.toString(sell(1,2,3));
+    }
 
     public AbstractFlower[] sell(int roseAmount, int daisyAmount, int tulipAmount) {
 
@@ -28,6 +35,5 @@ public class FlowerStore {
         System.arraycopy(tulipArray, 0, flowersBouquet, daisyArrLen + roseArrLen, tulipArrLen);
 
         return flowersBouquet;
-
     }
 }

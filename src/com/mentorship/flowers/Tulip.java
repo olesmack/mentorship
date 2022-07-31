@@ -1,4 +1,5 @@
 package com.mentorship.flowers;
 
-public class Tulip {
+public class Tulip extends AbstractFlower {
+
 }
